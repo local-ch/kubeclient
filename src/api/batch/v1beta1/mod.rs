@@ -2,8 +2,7 @@ use crate::api;
 use crate::apimachinery::apis::meta;
 
 use super::API_GROUP;
-pub const API_VERSION: &str = "v1beta1";
-
+pub const API_VERSION: &str = "v1";
 
 #[serde(rename_all = "camelCase")]
 #[derive(Serialize, Deserialize, Debug)]
