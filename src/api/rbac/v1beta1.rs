@@ -1,8 +1,7 @@
 use crate::apimachinery::apis::meta;
 
 use super::API_GROUP;
-pub const API_VERSION: &str = "v1beta1";
-
+pub const API_VERSION: &str = "v1";
 
 #[derive(Debug, Serialize, Deserialize, Default)]
 pub struct ClusterRole {
@@ -30,7 +29,11 @@ pub struct ClusterRoleBinding {
     pub role_ref: RoleRef,
 }
 
-kube_kind!(ClusterRoleBinding, ClusterRoleBindingList, "clusterrolebindings");
+kube_kind!(
+    ClusterRoleBinding,
+    ClusterRoleBindingList,
+    "clusterrolebindings"
+);
 
 #[serde(rename_all = "camelCase")]
 #[derive(Debug, Serialize, Deserialize, Default)]
